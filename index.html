@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090806">
+  <meta name="description" content="Manikarnika Hospitality & Event Production House — weddings, celebrations, hospitality, décor, catering and complete event production.">
+  <title>Manikarnika | Hospitality & Event Production House</title>
+  <style>
+    :root{--bg:#090806;--panel:#12100d;--panel2:#19150f;--gold:#d9b46a;--gold2:#f1d99e;--cream:#f4eee2;--muted:#b8ad9a;--line:rgba(217,180,106,.22);--serif:Georgia,'Times New Roman',serif;--sans:Arial,Helvetica,sans-serif}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--cream);font-family:var(--sans);line-height:1.65}a{color:inherit;text-decoration:none}button{font:inherit}
+    .wrap{width:min(1160px,calc(100% - 44px));margin:auto}.eyebrow{color:var(--gold);letter-spacing:.22em;text-transform:uppercase;font-size:.72rem;font-weight:700}.gold{color:var(--gold2)}
+    header{position:sticky;top:0;z-index:20;background:rgba(9,8,6,.91);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+    .nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;gap:12px;min-width:0}.brand img{width:154px;height:52px;object-fit:cover;object-position:center;border-radius:2px}.brand small{display:block;color:var(--muted);font-size:.58rem;letter-spacing:.13em;text-transform:uppercase}
+    .navlinks{display:flex;align-items:center;gap:25px;font-size:.82rem;color:#e4dac8}.navlinks a:hover{color:var(--gold2)}.nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;border:1px solid var(--gold);padding:11px 18px;color:var(--gold2);letter-spacing:.08em;text-transform:uppercase;font-size:.72rem;transition:.25s}.nav-cta:hover,.btn:hover{background:var(--gold);color:#171109}.menu{display:none;background:none;border:1px solid var(--line);color:var(--cream);padding:8px 12px}
+    .hero{min-height:690px;display:grid;align-items:center;position:relative;overflow:hidden;background:radial-gradient(ellipse at 76% 43%,rgba(164,117,43,.19),transparent 34%),radial-gradient(ellipse at 15% 85%,rgba(114,76,28,.15),transparent 34%),linear-gradient(115deg,#080705 0%,#171109 52%,#080705 100%)}
+    .hero:before,.hero:after{content:"";position:absolute;border:1px solid rgba(217,180,106,.16);border-radius:50%;width:560px;height:560px;right:-90px;top:60px;box-shadow:0 0 0 35px rgba(217,180,106,.025),0 0 0 75px rgba(217,180,106,.02)}
+    .hero:after{width:390px;height:390px;right:-5px;top:145px;border-color:rgba(217,180,106,.11)}
+    .hero-content{position:relative;z-index:1;max-width:760px;padding:95px 0}.hero h1{font:clamp(3.1rem,7vw,6.5rem)/.98 var(--serif);font-weight:400;letter-spacing:-.045em;margin:22px 0;color:#f4e8d0}.hero h1 em{font-style:normal;color:var(--gold2)}.hero p{max-width:590px;color:#c9bdab;font-size:1.05rem;margin:25px 0 32px}.hero-actions{display:flex;gap:13px;flex-wrap:wrap}.btn.primary{background:var(--gold);color:#171109}.hero-note{margin-top:58px;padding-top:20px;border-top:1px solid var(--line);display:flex;gap:35px;flex-wrap:wrap;color:var(--muted);font-size:.75rem;letter-spacing:.12em;text-transform:uppercase}
+    section{padding:100px 0}.section-head{max-width:720px;margin-bottom:45px}.section-head h2{font:clamp(2.2rem,4vw,3.7rem)/1.08 var(--serif);font-weight:400;margin:13px 0 18px}.section-head p{color:var(--muted);margin:0}.intro-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:70px;align-items:center}.quote-panel{padding:42px;background:linear-gradient(145deg,#1d170e,#100e0a);border:1px solid var(--line);position:relative}.quote-panel:before{content:"“";font:6rem var(--serif);color:var(--gold);line-height:.5;display:block;margin-bottom:25px}.quote-panel blockquote{font:1.65rem/1.4 var(--serif);margin:0;color:#f0dfbf}.quote-panel p{color:var(--muted);font-size:.78rem;letter-spacing:.13em;text-transform:uppercase;margin:26px 0 0}
+    .promise-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:25px;margin-top:28px}.promise{border-top:1px solid var(--line);padding-top:17px}.promise h3{font:1.25rem var(--serif);color:var(--gold2);font-weight:400;margin:0 0 6px}.promise p{font-size:.88rem;color:var(--muted);margin:0}
+    .services{background:#0e0c09}.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.service{min-height:240px;padding:25px 22px;border:1px solid var(--line);background:linear-gradient(160deg,rgba(255,255,255,.025),transparent 65%);transition:.25s}.service:hover{transform:translateY(-5px);border-color:rgba(217,180,106,.65);background:#17120b}.num{font-size:.72rem;color:var(--gold);letter-spacing:.15em}.service h3{font:1.35rem/1.2 var(--serif);font-weight:400;margin:28px 0 10px}.service p{font-size:.85rem;color:var(--muted);margin:0}
+    .weddings{background:linear-gradient(90deg,#100d08,#0a0907)}.wedding-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:65px}.function-list{display:grid;grid-template-columns:1fr 1fr;gap:0 30px}.function{padding:18px 0;border-bottom:1px solid var(--line)}.function h3{font:1.2rem var(--serif);font-weight:400;color:var(--gold2);margin:0 0 5px}.function p{color:var(--muted);font-size:.86rem;margin:0}.side-note{border-left:2px solid var(--gold);padding:5px 0 5px 22px;color:var(--muted);font-size:.9rem;margin-top:30px}
+    .split{display:grid;grid-template-columns:1fr 1fr;gap:70px}.list{list-style:none;padding:0;margin:24px 0 0}.list li{padding:12px 0;border-bottom:1px solid var(--line);color:#d5c9b7;font-size:.92rem}.list li:before{content:"✦";color:var(--gold);margin-right:12px;font-size:.75rem}
+    .steps{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}.step{padding:22px 18px;background:var(--panel);border:1px solid var(--line)}.step b{font:2rem var(--serif);color:var(--gold)}.step h3{font:1.15rem var(--serif);font-weight:400;margin:10px 0}.step p{font-size:.82rem;color:var(--muted);margin:0}
+    .collections{background:#0e0c09}.collection-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.collection{padding:28px 22px;border:1px solid var(--line);min-height:185px}.collection h3{font:1.5rem var(--serif);color:var(--gold2);font-weight:400;margin:0 0 12px}.collection p{font-size:.86rem;color:var(--muted);margin:0}
+    .contact{padding:100px 0;background:radial-gradient(ellipse at 50% 0%,rgba(161,113,40,.18),transparent 55%),#0b0906;text-align:center}.contact h2{font:clamp(2.7rem,6vw,5.4rem)/1 var(--serif);font-weight:400;margin:15px 0 20px}.contact p{max-width:620px;margin:0 auto 30px;color:var(--muted)}.contact-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}.contact-details{display:flex;justify-content:center;gap:35px;flex-wrap:wrap;margin-top:45px;color:#c9bdab;font-size:.9rem}.contact-details span{display:block;color:var(--gold);font-size:.68rem;text-transform:uppercase;letter-spacing:.15em;margin-bottom:4px}
+    footer{padding:25px 0;border-top:1px solid var(--line);color:#8e8373;font-size:.75rem}.footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    .fineprint{font-size:.75rem;color:#817767;max-width:900px;margin:35px auto 0}
+    @media(max-width:900px){.navlinks{gap:14px}.navlinks a{font-size:.75rem}.cards{grid-template-columns:repeat(2,1fr)}.steps{grid-template-columns:repeat(3,1fr)}.collection-grid{grid-template-columns:repeat(2,1fr)}.intro-grid,.wedding-grid,.split{gap:35px}}
+    @media(max-width:680px){.wrap{width:min(100% - 34px,560px)}.nav{height:68px}.brand img{width:128px;height:44px}.menu{display:block}.navlinks{display:none;position:absolute;top:68px;left:0;right:0;padding:20px 24px 25px;background:#0b0906;border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start}.navlinks.open{display:flex}.nav-cta{display:none}.hero{min-height:620px}.hero-content{padding:80px 0}.hero:before{right:-350px}.hero:after{right:-265px}.hero-note{gap:14px;flex-direction:column}.section-head{margin-bottom:32px}section{padding:75px 0}.intro-grid,.wedding-grid,.split{grid-template-columns:1fr}.promise-grid{gap:18px}.cards{grid-template-columns:1fr 1fr}.service{padding:20px 16px;min-height:230px}.service h3{font-size:1.18rem}.function-list{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}.step:last-child{grid-column:span 2}.collection-grid{grid-template-columns:1fr 1fr}.quote-panel{padding:30px}.contact-details{gap:22px}.footer-inner{flex-direction:column}}
+    @media(max-width:390px){.cards,.collection-grid{grid-template-columns:1fr}.steps{grid-template-columns:1fr}.step:last-child{grid-column:auto}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#home" aria-label="Manikarnika home"><img src="assets/manikarnika-logo.jpg" alt="Manikarnika Hospitality & Event Production House logo"></a>
+    <button class="menu" id="menuBtn" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <nav class="navlinks" id="navLinks">
+      <a href="#about">About</a><a href="#services">Services</a><a href="#weddings">Weddings</a><a href="#approach">Our Approach</a><a href="#collections">Collections</a><a href="#contact">Contact</a>
+    </nav>
+    <a class="nav-cta" href="#contact">Plan your event</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="wrap">
+      <div class="hero-content">
+        <div class="eyebrow">Weddings · Celebrations · Corporate Events · Experiences</div>
+        <h1>Every detail.<br><em>Every moment.</em><br>Perfectly managed.</h1>
+        <p>One partner for thoughtful planning, warm hospitality and beautifully coordinated event experiences. From the first conversation to the final farewell, we bring every essential detail together.</p>
+        <div class="hero-actions"><a class="btn primary" href="#contact">Start planning</a><a class="btn" href="#services">Explore services</a></div>
+        <div class="hero-note"><span>Thoughtful planning</span><span>Hospitality first</span><span>Creative production</span><span>Integrated delivery</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap intro-grid">
+      <div>
+        <div class="eyebrow">01 / The Manikarnika experience</div>
+        <div class="section-head"><h2>One partner.<br><span class="gold">Every experience.</span></h2><p>We plan, coordinate and produce memorable celebrations with a focus on thoughtful hospitality, seamless execution and considered detail. Whether it is an intimate gathering, a multi-day wedding or a corporate occasion, our approach is designed around your vision and your guests.</p></div>
+        <div class="promise-grid">
+          <div class="promise"><h3>Thoughtful planning</h3><p>Clear coordination, structured timelines and attention to the details that matter.</p></div>
+          <div class="promise"><h3>Hospitality first</h3><p>Guest comfort, warm welcomes and smooth on-ground assistance.</p></div>
+          <div class="promise"><h3>Creative production</h3><p>Distinctive themes, décor concepts, staging and event environments.</p></div>
+          <div class="promise"><h3>Integrated delivery</h3><p>A coordinated approach across venues, food, stay and production.</p></div>
+        </div>
+      </div>
+      <div class="quote-panel"><blockquote>A beautifully managed event is not just seen. It is felt in every welcome, every detail and every moment.</blockquote><p>The Manikarnika promise</p></div>
+    </div>
+  </section>
+
+  <section class="services" id="services">
+    <div class="wrap">
+      <div class="section-head"><div class="eyebrow">02 / Our services</div><h2>A complete event ecosystem.</h2><p>Choose a complete event solution or select individual services to suit your brief, scale and budget.</p></div>
+      <div class="cards">
+        <article class="service"><div class="num">01 / PLAN</div><h3>Event planning & management</h3><p>Concept development, planning calendar, budget support, vendor coordination, run-of-show and on-site management.</p></article>
+        <article class="service"><div class="num">02 / STAY</div><h3>Hotel & accommodation</h3><p>Hotel sourcing, room blocks, guest rooming lists, check-in coordination and stay assistance.</p></article>
+        <article class="service"><div class="num">03 / VENUE</div><h3>Venue sourcing & management</h3><p>Venue discovery, site visits, venue coordination, layouts and operational planning.</p></article>
+        <article class="service"><div class="num">04 / DESIGN</div><h3>Theme décor & design</h3><p>Theme concepts, stage and mandap décor, floral styling, table settings and ambient design.</p></article>
+        <article class="service"><div class="num">05 / TASTE</div><h3>Catering & culinary experiences</h3><p>Menu planning, buffet design, live counters, service staff, beverages and dessert experiences.</p></article>
+        <article class="service"><div class="num">06 / PRODUCE</div><h3>Event production & technology</h3><p>Stage, sound, lighting, LED screens, technical crew, power planning and show execution.</p></article>
+        <article class="service"><div class="num">07 / WELCOME</div><h3>Guest hospitality & transport</h3><p>Welcome desks, RSVP support, guest assistance, transfers and local transport coordination.</p></article>
+        <article class="service"><div class="num">08 / CELEBRATE</div><h3>Entertainment & celebrations</h3><p>Artist and performer coordination, DJ, live music, emcee, cultural acts and celebration programming.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="weddings" id="weddings">
+    <div class="wrap wedding-grid">
+      <div>
+        <div class="eyebrow">03 / Weddings & social celebrations</div>
+        <div class="section-head"><h2>Celebrate beautifully.<br><span class="gold">We’ll manage the details.</span></h2><p>Multi-day celebrations deserve a connected plan. We help bring every function together with consistent styling, hospitality and event coordination.</p></div>
+        <div class="side-note">One master timeline, coordinated teams and a clear point of contact help each function feel connected while retaining its own personality.</div>
+      </div>
+      <div>
+        <div class="eyebrow">Wedding functions</div>
+        <div class="function-list">
+          <div class="function"><h3>Welcome & arrival</h3><p>Guest welcome, hospitality desk, room allocation and arrival assistance.</p></div>
+          <div class="function"><h3>Mehndi</h3><p>Colourful theme décor, seating, music, food stations and activity corners.</p></div>
+          <div class="function"><h3>Haldi</h3><p>Floral or traditional setup, ceremonial seating, décor and refreshments.</p></div>
+          <div class="function"><h3>Sangeet</h3><p>Stage and show production, sound, lighting, artist coordination and guest flow.</p></div>
+          <div class="function"><h3>Wedding ceremony</h3><p>Mandap concept, aisle styling, floral design, ceremony logistics and hospitality.</p></div>
+          <div class="function"><h3>Reception</h3><p>Grand stage, guest arrival, dining experience, entertainment and event operations.</p></div>
+        </div>
+        <div class="eyebrow" style="margin-top:28px">Other social occasions</div>
+        <p style="color:var(--muted)">Engagements · Anniversaries · Birthdays · Private parties · Family gatherings · Festive celebrations · Cultural programmes · Intimate destination celebrations</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap split">
+      <div>
+        <div class="eyebrow">04 / Hospitality & accommodation</div><div class="section-head"><h2>A warm welcome.<br><span class="gold">A comfortable stay.</span></h2><p>Guest experience begins long before the event venue. Our hospitality coordination is designed to make arrivals, stays and departures feel effortless.</p></div>
+        <ul class="list"><li>Hotel research and accommodation options by location, category and budget</li><li>Room block coordination and guest rooming lists</li><li>Check-in and check-out assistance, welcome amenities and information desks</li><li>Coordination for VIP, family and special guest requirements</li><li>Airport, railway station and local transfers</li><li>Vehicle scheduling and guest movement coordination</li></ul>
+      </div>
+      <div>
+        <div class="eyebrow">05 / Theme décor & event design</div><div class="section-head"><h2>Set the scene.<br><span class="gold">Create the feeling.</span></h2><p>We shape the visual identity of your celebration through considered themes, colour stories, floral details and event environments.</p></div>
+        <ul class="list"><li>Royal & heritage — regal palettes and traditional motifs</li><li>Contemporary luxury — clean lines and statement installations</li><li>Floral romance — garden-inspired styling and soft palettes</li><li>Traditional Indian — cultural elements and ceremonial décor</li><li>Personalised themes inspired by your story and venue</li><li>Entrance, stage, mandap, aisle, table and floral styling</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="services">
+    <div class="wrap split">
+      <div><div class="eyebrow">06 / Catering & culinary experiences</div><div class="section-head"><h2>A menu that brings people together.</h2><p>From welcome refreshments to grand dining, we coordinate food and beverage experiences around the occasion, guest profile and service style.</p></div><ul class="list"><li>Breakfast, brunch, lunch, dinner and late-night menus</li><li>Buffet, plated dining and curated food stations</li><li>Live cooking counters and regional specialities</li><li>Snacks, starters, main courses, desserts and beverages</li><li>Indian regional, North Indian, South Indian, Gujarati and Rajasthani menus</li><li>Continental, Asian, global-inspired and pure vegetarian menus</li></ul></div>
+      <div><div class="eyebrow">07 / Event production & entertainment</div><div class="section-head"><h2>Make every moment stage-worthy.</h2><p>A strong event experience depends on the right technical planning and a well-coordinated show.</p></div><ul class="list"><li>Stage design, fabrication and event infrastructure</li><li>Professional sound systems, microphones and lighting</li><li>LED screens, projection and visual presentation</li><li>Power planning, technical crew and show calling</li><li>DJ, live bands, singers, instrumental performers and emcees</li><li>Cultural performances, artist liaison, photography and cinematography</li></ul></div>
+    </div>
+  </section>
+
+  <section id="approach">
+    <div class="wrap">
+      <div class="section-head"><div class="eyebrow">08 / Corporate & special events</div><h2>Professional events.<br><span class="gold">Thoughtfully produced.</span></h2><p>Our event coordination approach can be adapted for business gatherings and institutional occasions.</p></div>
+      <p style="color:var(--muted);margin:-18px 0 45px">Conferences · Seminars · Business meetings · Product launches · Brand activations · Exhibitions · Award nights · Annual days · Employee celebrations · Dealer meets · Networking events · Gala dinners</p>
+      <div class="eyebrow" style="margin-bottom:20px">How we work</div>
+      <div class="steps">
+        <article class="step"><b>01</b><h3>Discover</h3><p>We understand your occasion, audience, priorities, dates and budget.</p></article>
+        <article class="step"><b>02</b><h3>Concept & proposal</h3><p>We shape the experience and share a service plan with scope and estimates.</p></article>
+        <article class="step"><b>03</b><h3>Plan & confirm</h3><p>After approvals, we coordinate suppliers, schedules, layouts and logistics.</p></article>
+        <article class="step"><b>04</b><h3>Execute</h3><p>Our event team coordinates the approved plan on the event day.</p></article>
+        <article class="step"><b>05</b><h3>Close & review</h3><p>We support event wrap-up and review the delivery with you.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="collections" id="collections">
+    <div class="wrap">
+      <div class="section-head"><div class="eyebrow">09 / Service collections</div><h2>Flexible packages.<br><span class="gold">Made around your event.</span></h2><p>Every event is different. These collections are starting points for a tailored proposal—not fixed or pre-priced packages.</p></div>
+      <div class="collection-grid">
+        <article class="collection"><h3>Essential</h3><p>A focused selection of planning and coordination services for smaller gatherings and clearly defined event requirements.</p></article>
+        <article class="collection"><h3>Signature</h3><p>A broader combination of event planning, décor, hospitality and selected production services.</p></article>
+        <article class="collection"><h3>Royal</h3><p>A multi-function experience with expanded guest management, design coordination and event production.</p></article>
+        <article class="collection"><h3>Bespoke</h3><p>A fully customised scope built around your vision, venue, guest count, schedule and budget.</p></article>
+      </div>
+      <p style="color:var(--muted);font-size:.87rem;margin-top:26px">Your proposal can include a service-wise scope, event dates, venue details, guest-count assumptions, estimated budget, payment milestones, inclusions, exclusions and third-party dependencies. Pricing is shared after understanding the brief and confirming the required scope.</p>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <div class="eyebrow">Let’s create something extraordinary</div>
+      <h2>Your vision.<br><span class="gold">Our coordination.</span></h2>
+      <p>Tell us what you are celebrating. We’ll help shape the plan, bring the right services together and coordinate the details.</p>
+      <div class="contact-actions"><a class="btn primary" href="https://wa.me/917974362929?text=Hello%20Manikarnika%2C%20I%20would%20like%20to%20discuss%20an%20event." target="_blank" rel="noopener">WhatsApp us</a><a class="btn" href="tel:+917974362929">Call to discuss</a></div>
+      <div class="contact-details">
+        <div><span>Call / WhatsApp</span>+91 79743 62929</div>
+        <div><span>Also reach us</span>+91 70006 40787</div>
+        <div><span>Service focus</span>Weddings · Events · Hospitality</div>
+      </div>
+      <p class="fineprint">Hotels, room categories, vehicles, artists, technical specifications, permissions and related services are subject to availability, location, dates and final confirmation. Final scope, pricing, vendors and deliverables are confirmed through a written event proposal and agreement.</p>
+    </div>
+  </section>
+</main>
+<footer><div class="wrap footer-inner"><span>© <span id="year"></span> Manikarnika Hospitality & Event Production House</span><span>Every detail. Every moment. Perfectly managed.</span></div></footer>
+<script>
+  const menuBtn=document.getElementById('menuBtn'),nav=document.getElementById('navLinks');
+  menuBtn.addEventListener('click',()=>{const open=nav.classList.toggle('open');menuBtn.setAttribute('aria-expanded',String(open));menuBtn.textContent=open?'✕':'☰'});
+  nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');menuBtn.textContent='☰'}));
+  document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
